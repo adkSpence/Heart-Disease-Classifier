@@ -1,0 +1,147 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>M.I.C</title>
+        <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+        <link rel="stylesheet" href="css/predictor.css">
+        <link rel="stylesheet" href="css/hint.min.css">
+    </head>
+
+    <body>
+        
+        <section class="container">
+            <h3 class="center">Heart Disease Diagnostic</h3>
+
+            <div class="row">
+                <div class="col s3">
+                    <input type="text" name="name" class="question" id="age" data-tooltip="Age of patient" required autocomplete="off" />
+                    <label for="nme"><span>Age</span></label>
+                    <span class="hint--left hint--rounded hint--medium hint--bounce" aria-label="Age of patient">
+                        <i class="fas fa-info-circle fa-2x"></i>
+                    </span>
+                </div>
+
+                <div class="col s3">
+                    <input type="text" name="name" class="question" id="gender" required autocomplete="off" />
+                    <label for="nme"><span>Gender</span></label>
+                    <span class="hint--right hint--rounded hint--medium hint--bounce" aria-label="1= Female, 0= Male">
+                        <i class="fas fa-info-circle fa-2x"></i>
+                    </span>
+                </div>
+
+                <div class="col s3">
+                    <input type="text" name="name" class="question" id="chest-pain" required autocomplete="off" />
+                    <label for="nme"><span>Chest Pain Type</span></label>
+                    <span class="hint--right hint--rounded hint--bounce hint--medium" aria-label="0= typical angina, 1= atypical angina, 2= non-anginal pain, 3= asymptomatic">
+                        <i class="fas fa-info-circle fa-2x"></i>
+                    </span>
+                </div>
+
+                <div class="col s3">
+                    <input type="text" name="name" class="question" id="blood-pressure" required autocomplete="off" />
+                    <label for="nme"><span>Resting Blood Pressure</span></label>
+                    <span class="hint--right hint--rounded hint--bounce hint--medium" aria-label="Value of resting blood-pressure in mm Hg">
+                        <i class="fas fa-info-circle fa-2x"></i>
+                    </span>
+                </div>
+            </div>
+
+            <br>
+            <!--Next Row Here-->
+            <div class="row">
+                <div class="col s3">
+                    <input type="text" name="name" class="question" id="chol" required autocomplete="off" />
+                    <label for="nme"><span>Cholesterol</span></label>
+                    <span class="hint--left hint--rounded hint--bounce hint--medium" aria-label="cholesterol measurement in mg/dl">
+                        <i class="fas fa-info-circle fa-2x"></i>
+                    </span>
+                </div>
+
+                <div class="col s3">
+                    <input type="text" name="name" class="question" id="fbs" required autocomplete="off" />
+                    <label for="nme"><span>Fasting Blood Sugar</span></label>
+                    <span class="hint--right hint--rounded hint--bounce hint--medium" aria-label="If F.B.S > 120 mg/dl: 1= Yes, 0= No">
+                        <i class="fas fa-info-circle fa-2x"></i>
+                    </span>
+                </div>
+
+                <div class="col s3">
+                    <input type="text" name="name" class="question" id="ecg" required autocomplete="off" />
+                    <label for="nme"><span>Rest ECG</span></label>
+                    <span class="hint--right hint--bounce hint--medium hint--rounded" aria-label="0 = normal, 1 = having ST-T wave abnormality, 2 = showing probable or definite left ventricular hypertrophy by Estes' criteria">
+                        <i class="fas fa-info-circle fa-2x"></i>
+                    </span>
+                </div>
+
+                <div class="col s3">
+                    <input type="text" name="name" class="question" id="thal" required autocomplete="off" />
+                    <label for="nme"><span>Thalach</span></label>
+                    <span class="hint--right hint--rounded hint--bounce hint--medium" aria-label="maximum heart rate achieved">
+                        <i class="fas fa-info-circle fa-2x"></i>
+                    </span>
+                </div>
+            </div>
+
+            <br>
+            <!--Next Row Here-->
+            <div class="row">
+                <div class="col s3">
+                    <input type="text" name="name" class="question" id="exang" required autocomplete="off" />
+                    <label for="nme"><span>Exang</span></label>
+                    <span class="hint--left hint--rounded hint--bounce hint--medium" aria-label="exercise induced angina: 1= Yes, 0= No">
+                        <i class="fas fa-info-circle fa-2x"></i>
+                    </span>
+                </div>
+
+                <div class="col s3">
+                    <input type="text" name="name" class="question" id="oldpeak" required autocomplete="off" />
+                    <label for="nme"><span>Oldpeak</span></label>
+                    <span class="hint--bottom hint--rounded hint--bounce hint--medium" aria-label="ST depression induced by exercise relative to rest">
+                        <i class="fas fa-info-circle fa-2x"></i>
+                    </span>
+                </div>
+
+                <div class="col s3">
+                    <input type="text" name="name" class="question" id="slope" required autocomplete="off" />
+                    <label for="nme"><span>Slope</span></label>
+                    <span class="hint--bottom hint--rounded hint--bounce hint--medium" aria-label="slope of the peak exercise ST segment: 0= upsloping, 1= flat, 2= downsloping">
+                        <i class="fas fa-info-circle fa-2x"></i>
+                    </span>
+                </div>
+
+                <div class="col s3">
+                    <input type="text" name="name" class="question" id="major-vessels" required autocomplete="off" />
+                    <label for="nme"><span>Number of Major Vessels</span></label>
+                    <span class="hint--bottom hint--rounded hint--bounce hint--medium" aria-label="The number of major vessels (0-3)">
+                        <i class="fas fa-info-circle fa-2x"></i>
+                    </span>
+                </div>
+            </div>
+            
+            <br>
+            <!--Last Row Here-->
+            <div class="row">
+                <div class="col s3">
+                    <input type="text" name="name" class="question" id="thalassemia" required autocomplete="off" />
+                    <label for="nme"><span>Thalassemia</span></label>
+                    <span class="hint--bottom hint--rounded hint--bounce hint--medium" aria-label="blood disorder called thalassemia: 0= normal, 1 = fixed defect, 2 = reversable defect">
+                        <i class="fas fa-info-circle fa-2x"></i>
+                    </span>
+                </div>
+            </div>
+
+            <br>
+                <div class="right-align">
+                    <button class="custom-btn btn-predict" type="submit" onclick="get_prediction()">
+                    Predict</button>
+                </div>
+            </div>
+        </section>
+
+        <script src="../Linkers/prediction.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </body>
+</html>

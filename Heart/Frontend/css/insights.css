@@ -1,0 +1,371 @@
+body {
+  font-family: "Source Sans Pro";
+  margin: 0;
+  color: #222;
+  font-weight: 400;
+}
+a {
+  color: #ffa07a;
+}
+p,
+blockquote {
+  line-height: 1.6em;
+}
+p {
+  margin: 0 0 2em;
+}
+blockquote {
+  border-left: 1px solid rgba(204, 29, 38, 0.849);
+  margin: 0 0 1em;
+  padding: 0 0 0 1.5em;
+}
+h1,
+h2 {
+  font-weight: 400;
+  color: #666;
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2.4em;
+  margin: 0;
+}
+.date {
+  color: rgb(141, 138, 138);
+  font-weight: 200;
+}
+.canvas {
+  max-width: 80em;
+  margin: 0 auto;
+  padding: 0 2em 10em;
+}
+.page-header {
+  padding: 2em 0 1em;
+  margin: 0 0 4em;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+.page-header h1 {
+  margin: 0;
+  padding: 0 0 0.2em;
+  display: inline-block;
+}
+.page-header .summary {
+  letter-spacing: 0.2em;
+  color: #999;
+}
+article {
+  margin: 0 0 6em;
+  padding: 0 0 6em;
+  box-sizing: border-box;
+  position: relative;
+}
+article:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 30em;
+  left: 50%;
+  font-size: 1em;
+  border-bottom: 1px solid #ccc;
+  margin-left: -15em;
+  bottom: 0;
+  z-index: 1;
+}
+article:before {
+  content: '\021D5';
+  display: block;
+  position: absolute;
+  text-align: center;
+  color: #ccc;
+  font-size: 1.4em;
+  top: 100%;
+  left: 50%;
+  width: 1.6em;
+  height: 1.5em;
+  padding: 0.1em 0 0;
+  margin: -0.8em 0 0 -0.8em;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: #fff;
+  z-index: 2;
+}
+article:last-child:after,
+article:last-child:before {
+  display: none;
+}
+@media screen and (min-width: 40em) {
+  .sticky .stick {
+    position: fixed;
+    top: 0;
+    transition: opacity 0.5s;
+    opacity: 1;
+    width: calc(45% - 5.8em);
+  }
+  .sticky.hide .stick {
+    opacity: 0;
+  }
+  article {
+    position: relative;
+  }
+  article {
+    display: table;
+  }
+  article .content,
+  article header {
+    display: table-cell;
+    vertical-align: top;
+  }
+  article .content h2,
+  article header h2 {
+    margin: 0 0 0.4em;
+  }
+  article .content {
+    font-size: 1.2em;
+  }
+  article header {
+    width: 45%;
+    padding-right: 4em;
+  }
+}
+
+table,
+th,
+td {
+    border: none
+}
+
+table {
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+table.striped tr {
+    border-bottom: none
+}
+
+table.striped>tbody>tr:nth-child(odd) {
+    background-color: rgba(242, 242, 242, 0.5)
+}
+
+table.striped>tbody>tr>td {
+    border-radius: 0
+}
+
+table.highlight>tbody>tr {
+    -webkit-transition: background-color .25s ease;
+    transition: background-color .25s ease
+}
+
+table.highlight>tbody>tr:hover {
+    background-color: rgba(242, 242, 242, 0.5)
+}
+
+table.centered thead tr th,
+table.centered tbody tr td {
+    text-align: center
+}
+
+tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12)
+}
+
+td,
+th {
+    padding: 15px 5px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 2px
+}
+
+@media only screen and (max-width: 992px) {
+    table.responsive-table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        display: block;
+        position: relative
+    }
+
+    table.responsive-table td:empty:before {
+        content: '\00a0'
+    }
+
+    table.responsive-table th,
+    table.responsive-table td {
+        margin: 0;
+        vertical-align: top
+    }
+
+    table.responsive-table th {
+        text-align: left
+    }
+
+    table.responsive-table thead {
+        display: block;
+        float: left
+    }
+
+    table.responsive-table thead tr {
+        display: block;
+        padding: 0 10px 0 0
+    }
+
+    table.responsive-table thead tr th::before {
+        content: "\00a0"
+    }
+
+    table.responsive-table tbody {
+        display: block;
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+        white-space: nowrap
+    }
+
+    table.responsive-table tbody tr {
+        display: inline-block;
+        vertical-align: top
+    }
+
+    table.responsive-table th {
+        display: block;
+        text-align: right
+    }
+
+    table.responsive-table td {
+        display: block;
+        min-height: 1.25em;
+        text-align: left
+    }
+
+    table.responsive-table tr {
+        border-bottom: none;
+        padding: 0 10px
+    }
+
+    table.responsive-table thead {
+        border: 0;
+        border-right: 1px solid rgba(0, 0, 0, 0.12)
+    }
+}
+
+.collection {
+    margin: .5rem 0 1rem 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative
+}
+
+.collection .collection-item {
+    background-color: #fff;
+    line-height: 1.5rem;
+    padding: 10px 20px;
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0
+}
+
+.collection .collection-item.avatar {
+    min-height: 84px;
+    padding-left: 72px;
+    position: relative
+}
+
+.collection .collection-item.avatar:not(.circle-clipper)>.circle,
+.collection .collection-item.avatar :not(.circle-clipper)>.circle {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    overflow: hidden;
+    left: 15px;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.collection .collection-item.avatar i.circle {
+    font-size: 18px;
+    line-height: 42px;
+    color: #fff;
+    background-color: #999;
+    text-align: center
+}
+
+.collection .collection-item.avatar .title {
+    font-size: 16px
+}
+
+.collection .collection-item.avatar p {
+    margin: 0
+}
+
+.collection .collection-item.avatar .secondary-content {
+    position: absolute;
+    top: 16px;
+    right: 16px
+}
+
+.collection .collection-item:last-child {
+    border-bottom: none
+}
+
+.collection .collection-item.active {
+    background-color: #26a69a;
+    color: #eafaf9
+}
+
+.collection .collection-item.active .secondary-content {
+    color: #fff
+}
+
+.collection a.collection-item {
+    display: block;
+    -webkit-transition: .25s;
+    transition: .25s;
+    color: #26a69a
+}
+
+.collection a.collection-item:not(.active):hover {
+    background-color: #ddd
+}
+
+.collection.with-header .collection-header {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 20px
+}
+
+.collection.with-header .collection-item {
+    padding-left: 30px
+}
+
+.collection.with-header .collection-item.avatar {
+    padding-left: 72px
+}
+
+.secondary-content {
+    float: right;
+    color: #26a69a
+}
+
+.collapsible .collection {
+    margin: 0;
+    border: none
+}
+
+.circle {
+  border-radius: 50%
+}
+
+ul:not(.browser-default) {
+  padding-left: 0;
+  list-style-type: none
+}
+
+ul:not(.browser-default)>li {
+  list-style-type: none
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>M.I.C</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway:500.700'>
+    <link rel="stylesheet" href="css/home-style.css">
+</head>
+
+<body>
+
+  <h1 class="title">Welcome. Please select option from the Card Menu</h1>
+
+<div id="app" class="container">
+  <card data-image="images/diagnostic.jpg" onclick="displayPredictor()">
+    <h1 slot="header">Heart Disease Classifier</h1>
+    <p slot="content">Input values from tests to check a patient's status</p>
+  </card>
+  <card data-image="images/notes.jpg" onclick="displayNotes()">
+    <h1 slot="header">Physician Notes</h1>
+    <p slot="content">Write observations, plans and recommendations</p>
+  </card>
+  <card data-image="images/insights.jpg" onclick="displayInsights()">
+    <h1 slot="header">Insights</h1>
+    <p slot="content">Explanations of how the model was built and other help</p>
+  </card>
+</div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js'></script>
+    <script  src="js/home.js"></script>
+
+    <script>
+      function displayPredictor(){
+        window.open("prediction.html");
+      }
+
+      function displayNotes(){
+        window.open("notes.html");
+      }
+
+      function displayInsights(){
+        window.open("insights.html");
+      }
+    </script>
+
+</body>
+
+</html>
